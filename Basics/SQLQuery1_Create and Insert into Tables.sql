@@ -1,3 +1,4 @@
+Drop Table If Exists EmployeeDemographics
 Create Table EmployeeDemographics 
 (EmployeeID int, 
 FirstName varchar(50), 
@@ -20,7 +21,7 @@ Insert into EmployeeDemographics VALUES
 (NULL, 'Holly', 'Flax', NULL, NULL),
 (1013, 'Darryl', 'Philbin', NULL, 'Male')	
 
-
+Drop Table If Exists EmployeeSalary
 Create Table EmployeeSalary 
 (EmployeeID int, 
 JobTitle varchar(50), 
@@ -40,6 +41,7 @@ Insert Into EmployeeSalary VALUES
 (1010, NULL, 47000),
 (NULL, 'Salesman', 43000)
 
+Drop Table If Exists WareHouseEmployeeDemographics
 Create Table WareHouseEmployeeDemographics 
 (EmployeeID int, 
 FirstName varchar(50), 

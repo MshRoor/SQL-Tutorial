@@ -11,12 +11,12 @@ AvgSalary int
 
 Insert into #temp_employee
 SELECT JobTitle, Count(JobTitle), Avg(Age), AVG(salary)
-FROM EmployeeDemographics emp
-JOIN EmployeeSalary sal
+FROM SQLTutorial..EmployeeDemographics emp
+JOIN SQLTutorial..EmployeeSalary sal
 	ON emp.EmployeeID = sal.EmployeeID
 group by JobTitle
 
-Select *
+Select * 
 From #temp_employee
 
-Exec Temp_Employee @JobTitle = 'Salesman'
+exec Temp_Employee @JobTitle = 'Salesman'

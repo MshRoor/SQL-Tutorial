@@ -8,15 +8,13 @@
 --where Age Is Not Null
 --order by Age
 
-Select FirstName, LastName, JobTitle, Salary,
-
-Case
-	When Jobtitle = 'Salesman' Then Salary + (Salary * .10)
-	When Jobtitle = 'Accountant' then Salary + (Salary * .05)
-	When Jobtitle = 'HR' Then Salary + (Salary * 0.000001)
-	Else Salary + (Salary * 0.03)
-End As SalaryAfterRaise
-
-from SQLTutorial.dbo.EmployeeDemographics
-Join SQLTutorial.dbo.EmployeeSalary
-	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+SELECT FirstName, LastName, JobTitle, Salary,
+       CAST(CASE
+                WHEN Jobtitle = 'Salesman' THEN Salary + (Salary * .10)
+                WHEN Jobtitle = 'Accountant' THEN Salary + (Salary * .05)
+                WHEN Jobtitle = 'HR' THEN Salary + (Salary * 0.000001)
+                ELSE Salary + (Salary * 0.03)
+            END AS decimal(10, 2)) AS SalaryAfterRaise
+FROM SQLTutorial.dbo.EmployeeDemographics
+JOIN SQLTutorial.dbo.EmployeeSalary
+    ON EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID

@@ -7,22 +7,22 @@ Select Statement
 --from EmployeeDemographics
 
 select FirstName, LastName
-from EmployeeDemographics
+from SQLTutorial..EmployeeDemographics
 
 SELECT TOP 5 *
-FROM EmployeeDemographics
+FROM SQLTutorial..EmployeeDemographics
 
 select distinct(Gender) --only outputs the unique values in the column
-from EmployeeDemographics
+from SQLTutorial..EmployeeDemographics
 
-select count(Gender) as GenderCount--how many rows for that column. the as keyword is used to									name the count column in the output.
-from EmployeeDemographics
+select count(Gender) as GenderCount--how many rows for that column. The as keyword is used to									name the count column in the output.
+from SQLTutorial..EmployeeDemographics
 
 select MAX(Salary) as maxSalary
-from EmployeeSalary
+from SQLTutorial..EmployeeSalary
 
 select MIN(Salary) as minSalary
-from EmployeeSalary
+from SQLTutorial..EmployeeSalary
 
 select AVG(Salary) as avgSalary
 from EmployeeSalary

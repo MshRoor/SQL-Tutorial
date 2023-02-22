@@ -1,50 +1,50 @@
 --select *
---from EmployeeDemographics
+--from SQLTutorial..EmployeeDemographics
 
 --select *
---from EmployeeSalary
+--from SQLTutorial..EmployeeSalary
 
 --select *
---from EmployeeDemographics
---inner join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--from SQLTutorial..EmployeeDemographics
+--inner join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
 --select *
---from EmployeeDemographics
---full outer join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--from SQLTutorial..EmployeeDemographics
+--full outer join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
 --select *
---from EmployeeDemographics
---left outer join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--from SQLTutorial..EmployeeDemographics
+--left outer join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
 --select *
---from EmployeeDemographics
---right outer join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--from SQLTutorial..EmployeeDemographics
+--right outer join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
---select EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
---from EmployeeDemographics
---left outer join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--select SQLTutorial..EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+--from SQLTutorial..EmployeeDemographics
+--left outer join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
---select EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
---from EmployeeDemographics
---right outer join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--select SQLTutorial..EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+--from SQLTutorial..EmployeeDemographics
+--right outer join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 
---select EmployeeDemographics.EmployeeID, FirstName, LastName, Salary
---from EmployeeDemographics
---inner join EmployeeSalary
---	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--select SQLTutorial..EmployeeDemographics.EmployeeID, FirstName, LastName, Salary
+--from SQLTutorial..EmployeeDemographics
+--inner join SQLTutorial..EmployeeSalary
+--	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 --where FirstName <> 'Michael'
 --order by salary desc
 
 select JobTitle, Avg(Salary) as AvgSalesmanSalary
-from EmployeeDemographics
-inner join EmployeeSalary
-	on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+from SQLTutorial..EmployeeDemographics
+inner join SQLTutorial..EmployeeSalary
+	on SQLTutorial..EmployeeDemographics.EmployeeID = SQLTutorial..EmployeeSalary.EmployeeID
 where JobTitle = 'Salesman'
 group by JobTitle
 
